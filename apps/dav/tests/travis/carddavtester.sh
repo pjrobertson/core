@@ -8,6 +8,7 @@ php -S 127.0.0.1:8888 -t "$SCRIPTPATH/../../../.." &
 
 
 if [ ! -f CalDAVTester/run.py ]; then
+	cd "$SCRIPTPATH"
     git clone https://github.com/DeepDiver1975/CalDAVTester.git
 	cd "$SCRIPTPATH/CalDAVTester"
     python run.py -s
