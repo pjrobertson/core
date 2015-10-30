@@ -8,6 +8,13 @@
 @font-face {
 	font-family: 'Open Sans';
 	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans'), local('OpenSans'), url(../fonts/OpenSans-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
 	font-weight: 600;
 	src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/OpenSans-Semibold.woff) format('woff');
 }

@@ -27,7 +27,7 @@ select:hover {
 
 body {
 	background-color: #ffffff;
-	font-weight: 300;
+	font-weight: normal;
 	font-size: .8em;
 	line-height: 1.6em;
 	font-family: 'Open Sans', Frutiger, Calibri, 'Myriad Pro', Myriad, sans-serif;
@@ -614,6 +614,7 @@ input[name='password-clone'] {
 #body-login input[type="password"],
 #body-login input[type="email"] {
 	border: none;
+	font-weight: 300;
 }
 
 /* Nicely grouping input field sets */
@@ -1204,4 +1205,3 @@ fieldset.warning legend + p, fieldset.update legend + p {
    opacity: 0;
    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
-
