@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  */
-namespace Tests\Connector\Sabre;
+namespace OCA\DAV\Tests\Unit\CardDAV;
 
 use OCA\DAV\CardDAV\CardDavBackend;
 use Sabre\DAV\PropPatch;
