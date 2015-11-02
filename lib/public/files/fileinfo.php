@@ -229,4 +229,12 @@ interface FileInfo {
 	 * @since 8.0.0
 	 */
 	public function getMountPoint();
+
+	/**
+	 * Get owner
+	 *
+	 * @since 9.0.0
+	 */
+	public function getOwner();
+
 }

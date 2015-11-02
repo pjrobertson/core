@@ -55,6 +55,11 @@ class FileInfo implements \OCP\Files\FileInfo, \ArrayAccess {
 	private $mount;
 
 	/**
+	 * @var string
+	 */
+	private $owner;
+
+	/**
 	 * @param string|boolean $path
 	 * @param Storage\Storage $storage
 	 * @param string $internalPath
@@ -266,5 +271,14 @@ class FileInfo implements \OCP\Files\FileInfo, \ArrayAccess {
 	 */
 	public function getMountPoint() {
 		return $this->mount;
+	}
+
+	public function getOwner() {
+		if ($this->owner) {
+			return $this->owner;
+		}
+
+		$this->owner = $this->storage->getOwner($this->internalPath);
+		return $this->owner;
 	}
 }
