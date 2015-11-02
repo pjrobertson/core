@@ -42,7 +42,7 @@ class Test_Files_Helper extends \Test\TestCase {
 				'type' => $isDir ? 'dir' : 'file',
 				'mimetype' => $isDir ? 'httpd/unix-directory' : 'application/octet-stream'
 			),
-			null
+			null, null
 		);
 	}
 

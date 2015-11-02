@@ -135,7 +135,7 @@ class ObjectTree extends \Sabre\DAV\Tree {
 				$scanner = $storage->getScanner($internalPath);
 				// get data directly
 				$data = $scanner->getData($internalPath);
-				$info = new FileInfo($absPath, $storage, $internalPath, $data, $mount);
+				$info = new FileInfo($absPath, $storage, $internalPath, $data, $mount, null);
 			} else {
 				$info = null;
 			}

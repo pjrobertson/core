@@ -101,7 +101,7 @@ class ObjectTree extends \Test\TestCase {
 	private function moveTest($source, $destination, $updatables, $deletables) {
 		$view = new TestDoubleFileView($updatables, $deletables);
 
-		$info = new FileInfo('', null, null, array(), null);
+		$info = new FileInfo('', null, null, array(), null, null);
 
 		$rootDir = new Directory($view, $info);
 		$objectTree = $this->getMock('\OCA\DAV\Connector\Sabre\ObjectTree',

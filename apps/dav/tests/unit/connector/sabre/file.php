@@ -136,7 +136,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/test.txt', null, null, array(
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		), null);
+		), null, null);
 
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
@@ -196,7 +196,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/test.txt-chunking-12345-2-0', null, null, [
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		], null);
+		], null, null);
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
 		// put first chunk
@@ -206,7 +206,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/test.txt-chunking-12345-2-1', null, null, [
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		], null);
+		], null, null);
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
 		// action
@@ -249,6 +249,7 @@ class File extends \Test\TestCase {
 			null,
 			null,
 			['permissions' => \OCP\Constants::PERMISSION_ALL],
+			null,
 			null
 		);
 
@@ -437,7 +438,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/test.txt', null, null, array(
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		), null);
+		), null, null);
 
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
@@ -470,7 +471,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/' . $this->user . '/files/test.txt', null, null, array(
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		), null);
+		), null, null);
 
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
@@ -505,7 +506,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/' . $this->user . '/files/test.txt-chunking-12345-2-0', null, null, [
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		], null);
+		], null, null);
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 		$file->acquireLock(ILockingProvider::LOCK_SHARED);
 		$this->assertNull($file->put('test data one'));
@@ -513,7 +514,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/' . $this->user . '/files/test.txt-chunking-12345-2-1', null, null, [
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		], null);
+		], null, null);
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
 		// action
@@ -542,7 +543,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/*', null, null, array(
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		), null);
+		), null, null);
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
 		// action
@@ -578,7 +579,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/*', null, null, array(
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		), null);
+		), null, null);
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 		$file->setName('/super*star.txt');
 	}
@@ -605,7 +606,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/test.txt', null, null, array(
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		), null);
+		), null, null);
 
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
@@ -641,7 +642,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/test.txt', null, null, array(
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		), null);
+		), null, null);
 
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
@@ -659,7 +660,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/test.txt', null, null, array(
 			'permissions' => 0
-		), null);
+		), null, null);
 
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
@@ -682,7 +683,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/test.txt', null, null, array(
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		), null);
+		), null, null);
 
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 
@@ -718,6 +719,7 @@ class File extends \Test\TestCase {
 			null,
 			null,
 			['permissions' => \OCP\Constants::PERMISSION_ALL],
+			null,
 			null
 		);
 
@@ -829,7 +831,7 @@ class File extends \Test\TestCase {
 
 		$info = new \OC\Files\FileInfo('/test.txt', null, null, array(
 			'permissions' => \OCP\Constants::PERMISSION_ALL
-		), null);
+		), null, null);
 
 		$file = new \OCA\DAV\Connector\Sabre\File($view, $info);
 

@@ -95,7 +95,7 @@ class Helper
 					if ($originalPath) {
 						$i['extraData'] = $originalPath.'/'.$id;
 					}
-					$result[] = new FileInfo($absoluteDir . '/' . $i['name'], $storage, $internalPath . '/' . $i['name'], $i, $mount);
+					$result[] = new FileInfo($absoluteDir . '/' . $i['name'], $storage, $internalPath . '/' . $i['name'], $i, $mount, null);
 				}
 			}
 			closedir($dirContent);

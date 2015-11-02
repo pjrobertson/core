@@ -97,7 +97,8 @@ class ApiControllerTest extends TestCase {
 			],
 			$this->getMockBuilder('\OCP\Files\Mount\IMountPoint')
 				->disableOriginalConstructor()
-				->getMock()
+				->getMock(),
+			null
 		);
 		$this->tagService->expects($this->once())
 			->method('getFilesByTag')
@@ -144,7 +145,8 @@ class ApiControllerTest extends TestCase {
 			],
 			$this->getMockBuilder('\OCP\Files\Mount\IMountPoint')
 				->disableOriginalConstructor()
-				->getMock()
+				->getMock(),
+			null
 		);
 		$fileInfo2 = new FileInfo(
 			'/root.txt',
@@ -160,7 +162,8 @@ class ApiControllerTest extends TestCase {
 			],
 			$this->getMockBuilder('\OCP\Files\Mount\IMountPoint')
 				->disableOriginalConstructor()
-				->getMock()
+				->getMock(),
+			null
 		);
 		$this->tagService->expects($this->once())
 			->method('getFilesByTag')

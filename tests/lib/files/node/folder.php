@@ -25,7 +25,7 @@ class Folder extends \Test\TestCase {
 	}
 
 	protected function getFileInfo($data) {
-		return new FileInfo('', null, '', $data, null);
+		return new FileInfo('', null, '', $data, null, null);
 	}
 
 	public function testDelete() {
@@ -147,8 +147,8 @@ class Folder extends \Test\TestCase {
 			->method('getDirectoryContent')
 			->with('/bar/foo')
 			->will($this->returnValue(array(
-				new FileInfo('/bar/foo/asd', null, 'foo/asd', ['fileid' => 2, 'path' => '/bar/foo/asd', 'name' => 'asd', 'size' => 100, 'mtime' => 50, 'mimetype' => 'text/plain'], null),
-				new FileInfo('/bar/foo/qwerty', null, 'foo/qwerty', ['fileid' => 3, 'path' => '/bar/foo/qwerty', 'name' => 'qwerty', 'size' => 200, 'mtime' => 55, 'mimetype' => 'httpd/unix-directory'], null)
+				new FileInfo('/bar/foo/asd', null, 'foo/asd', ['fileid' => 2, 'path' => '/bar/foo/asd', 'name' => 'asd', 'size' => 100, 'mtime' => 50, 'mimetype' => 'text/plain'], null, null),
+				new FileInfo('/bar/foo/qwerty', null, 'foo/qwerty', ['fileid' => 3, 'path' => '/bar/foo/qwerty', 'name' => 'qwerty', 'size' => 200, 'mtime' => 55, 'mimetype' => 'httpd/unix-directory'], null, null)
 			)));
 
 		$node = new \OC\Files\Node\Folder($root, $view, '/bar/foo');

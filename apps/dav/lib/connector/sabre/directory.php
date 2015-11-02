@@ -109,7 +109,7 @@ class Directory extends \OCA\DAV\Connector\Sabre\Node
 
 			$path = $this->fileView->getAbsolutePath($this->path) . '/' . $name;
 			// using a dummy FileInfo is acceptable here since it will be refreshed after the put is complete
-			$info = new \OC\Files\FileInfo($path, null, null, array(), null);
+			$info = new \OC\Files\FileInfo($path, null, null, array(), null, null);
 			$node = new \OCA\DAV\Connector\Sabre\File($this->fileView, $info);
 			$node->acquireLock(ILockingProvider::LOCK_SHARED);
 			return $node->put($data);

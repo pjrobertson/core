@@ -921,7 +921,7 @@ class Preview extends TestCase {
 	}
 
 	public function testSetFileWithInfo() {
-		$info = new FileInfo('/foo', null, '/foo', ['mimetype' => 'foo/bar'], null);
+		$info = new FileInfo('/foo', null, '/foo', ['mimetype' => 'foo/bar'], null, null);
 		$preview = new \OC\Preview();
 		$preview->setFile('/foo', $info);
 		$this->assertEquals($info, $this->invokePrivate($preview, 'getFileInfo'));
