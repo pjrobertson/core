@@ -128,4 +128,11 @@ interface IShare {
 	 * @return int
 	 */
 	public function getParent();
+
+	/**
+	 * Get the target of this share
+	 *
+	 * @return string
+	 */
+	public function getTarget();
 }
