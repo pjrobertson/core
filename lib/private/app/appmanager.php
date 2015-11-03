@@ -313,4 +313,15 @@ class AppManager implements IAppManager {
 		$this->loadShippedJson();
 		return $this->alwaysEnabled;
 	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function getAppPath($appId) {
+		$path = \OC_App::getAppPath($appId);
+		if($path === false) {
+			throw new \Exception('App not found');
+		}
+		return $path;
+	}
 }

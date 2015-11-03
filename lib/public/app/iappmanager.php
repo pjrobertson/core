@@ -111,4 +111,14 @@ interface IAppManager {
 	 * @since 9.0.0
 	 */
 	public function getAlwaysEnabledApps();
+
+	/**
+	 * Get the directory for the given app.
+	 *
+	 * @param string $appId
+	 * @return string Path to app directory
+	 * @throws \Exception
+	 * @since 9.0.0
+	 */
+	public function getAppPath($appId);
 }

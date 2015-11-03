@@ -274,4 +274,16 @@ class Manager extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals('test1', $apps[0]['id']);
 		$this->assertEquals('test3', $apps[1]['id']);
 	}
+
+	public function testGetAppPath() {
+		$this->assertSame(\OC_App::getAppPath('files'), $this->manager->getAppPath('files'));
+	}
+
+	/**
+	 * @expectedException \Exception
+	 * @expectedExceptionMessage App not found
+	 */
+	public function testGetAppPathNotExistentApp() {
+		$this->manager->getAppPath('aTotallyNotExistingApp');
+	}
 }
